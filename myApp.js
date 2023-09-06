@@ -1,7 +1,62 @@
 require('dotenv').config();
+//moongoatlas database id:
+// username : maxmonthonkachana2 pass :a3bM4ySgPKiUnA5H ip: 0.0.0.0/0
+let url = 'mongodb+srv://maxmonthonkachana2:a3bM4ySgPKiUnA5H@freecodecamp.2syq8co.mongodb.net/'
+const mongoose = require('mongoose');
+mongoose.connect(process.env.MONGO_URI, {
+  useNewUrlParser: true,
+  useUnifiedTopology: true
+});
+
+let peopleSchema = mongoose.Schema({
+  name: { type: String, required: true },
+  age: Number,
+  favoriteFoods: [String]
+})
+
+let Person = mongoose.model('Person', peopleSchema)
+
+let dave = new Person({ name: 'Dave', age: 27, favoriteFoods: ['pizza', 'chips'] })
+
+console.log(dave)
 
 
-let Person;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 const createAndSavePerson = (done) => {
   done(null /*, data*/);
