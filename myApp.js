@@ -124,3 +124,5 @@ exports.createManyPeople = createManyPeople;
 exports.removeById = removeById;
 exports.removeManyPeople = removeManyPeople;
 exports.queryChain = queryChain;
+// .evn
+// MONGO_URI='mongodb+srv://maxmonthonkachana2:a3bM4ySgPKiUnA5H@freecodecamp.2syq8co.mongodb.net/'
